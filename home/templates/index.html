@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WeatherSpotter</title>
+    </head>
+    <body>
+        <div align='center'>
+            <h1> Welcome to WeatherSpotter </h1>
+            </br>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" placeholder="Type your City Name" name="city"/>
+                <button type="submit"> Submit </button>
+
+            </form>
+            <div>
+                <h2> You are in {{city}}</h2>
+                <h2> {{description}} </h2>
+                <h2> Current Temperature {{temp}} degree calcius </h2>
+                <h2>  Humadity {{humidity}} % </h2>
+                <h2> {{day}} </h2>
+            </div>
+        </div>
+    </body>
+</html> 
